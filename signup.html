@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sign Up — Student to Student Tutoring</title>
+  <title>Student to Student Tutoring</title>
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 </head>
@@ -11,34 +11,147 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">Student to Student Tutoring</div>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
       <nav class="nav">
-        <a href="index.html#home">Home</a>
-        <a href="index.html#tutors">Tutors</a>
-        <a href="index.html#subjects">Subjects</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tutors">Tutors</a>
+        <a href="#subjects">Subjects</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIbGK-cFpmL8tbk7_HzeT0z-sRKs0uzM3I8wgg_nxPsewC2Q/viewform?usp=header" target="_blank" class="signup-link">Sign Up (Tutored)</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYc05n-NvpuJ9tSuyjHm67mhTQ3Ak8rltndpJlCDH_mUAN1Q/viewform?usp=publish-editor" target="_blank" class="signup-link">Sign Up (Tutor)</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="section container">
-    <h1>Sign Up</h1>
-    <p>To sign up for tutoring or to become a tutor, click the appropriate link below. (Replace the link with your Google Form URL when ready.)</p>
-
-    <div class="signup-links">
-      <div class="signup-card">
-        <h3>Student Requesting Tutoring</h3>
-        <p>Information to collect: Name, Grade, School, Email, Subject needed, Short description, Preferred meeting times, (Optional) Meeting mode.</p>
-        <!-- Replace the href with your Google Form URL -->
-        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noopener">Request a Tutor (Google Form)</a>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Helping underclassmen succeed with homework and study tips from experienced upperclassmen.</h1>
+        <p class="lead">Peer tutoring for 9th & 10th grade — friendly, experienced, and student-focused.</p>
+        <a class="btn" href="#tutors">Meet Our Tutors</a>
       </div>
+    </section>
 
-      <div class="signup-card">
-        <h3>Become a Tutor</h3>
-        <p>Information to collect: Name, Grade, Subjects they can tutor, Experience, Email, Availability.</p>
-        <a class="btn outline" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" target="_blank" rel="noopener">Become a Tutor (Google Form)</a>
+    <!-- FOUNDERS -->
+    <section id="about" class="section founders">
+      <div class="container">
+        <h2>Founders & Presidents</h2>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <!-- add image later: <img src="images/aadi.jpg" alt="Aadi Shelat"> -->
+            <h3>Aadi Shelat</h3>
+            <p>Founder & Co-President</p>
+          </div>
+          <div class="founder-card">
+            <!-- add image later: <img src="images/ajan.jpg" alt="Ajan Sharma"> -->
+            <h3>Ajan Sharma</h3>
+            <p>Co-President & Lead Tutor</p>
+          </div>
+        </div>
+        <p class="founder-intro">Hi! We are Aadi Shelat and Ajan Sharma, the founders of Student to Student Tutoring. We started this program to connect students with experienced tutors who can help them succeed in their classes.</p>
       </div>
-    </div>
+    </section>
 
-    <p class="note">You said you don't want the site to store signups — these links will open Google Forms which will collect responses for you.</p>
+    <!-- TUTORS -->
+    <section id="tutors" class="section tutors">
+      <div class="container">
+        <h2>Our Tutors</h2>
+        <div class="tutors-grid">
+          <article class="tutor-card">
+            <!-- add later: <img src="images/orson.jpg" alt="Orson Liang"> -->
+            <h3>Orson Liang</h3>
+            <p class="role">STEM Specialist</p>
+            <p>Focus: STEM subjects and project help.</p>
+          </article>
+
+          <article class="tutor-card">
+            <h3>Liam Hartmann</h3>
+            <p class="role">Math Tutor</p>
+            <p>Focus: Algebra, Geometry, and Chemistry.</p>
+          </article>
+
+          <article class="tutor-card">
+            <h3>Ethan Chen</h3>
+            <p class="role">Math, Sciences, and Chinese</p>
+            <p>Focus: Math, Biology, Chemistry, and Chinese language support.</p>
+          </article>
+
+          <article class="tutor-card">
+            <h3>William Hunter</h3>
+            <p class="role">English & History</p>
+            <p>Focus: Writing, literature analysis, and history/social studies.</p>
+          </article>
+        </div>
+
+        <div class="tutors-cta">
+          <a class="btn outline" href="https://docs.google.com/forms/d/e/1FAIpQLSfYc05n-NvpuJ9tSuyjHm67mhTQ3Ak8rltndpJlCDH_mUAN1Q/viewform?usp=publish-editor" target="_blank">Become a Tutor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBJECTS -->
+    <section id="subjects" class="section subjects">
+      <div class="container">
+        <h2>Subjects Offered</h2>
+
+        <div class="subjects-grid">
+          <div class="subject-card">
+            <h4>Math</h4>
+            <p>Algebra, Geometry, Pre-Calc, Calculus</p>
+          </div>
+          <div class="subject-card">
+            <h4>Science</h4>
+            <p>Biology, Chemistry, Physics</p>
+          </div>
+          <div class="subject-card">
+            <h4>English</h4>
+            <p>Literature, Writing, Reading comprehension</p>
+          </div>
+          <div class="subject-card">
+            <h4>History / Social Studies</h4>
+            <p>World history, US history, civics</p>
+          </div>
+          <div class="subject-card">
+            <h4>Coding</h4>
+            <p>Python, Java</p>
+          </div>
+          <div class="subject-card">
+            <h4>Languages</h4>
+            <p>We offer support in multiple languages.</p>
+          </div>
+          <div class="subject-card">
+            <h4>Economics</h4>
+            <p>Basic concepts, micro & macroeconomics.</p>
+          </div>
+          <div class="subject-card wide">
+            <h4>Grade Coverage</h4>
+            <p>We offer any and all subjects for 9th and 10th grade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNUP SECTION -->
+    <section id="signup" class="section signup">
+      <div class="container">
+        <h2>Sign Up</h2>
+        <p>Click below to either request a tutor or sign up as a tutor.</p>
+        <div class="signup-links">
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfIbGK-cFpmL8tbk7_HzeT0z-sRKs0uzM3I8wgg_nxPsewC2Q/viewform?usp=header" target="_blank">Request a Tutor</a>
+          <a class="btn outline" href="https://docs.google.com/forms/d/e/1FAIpQLSfYc05n-NvpuJ9tSuyjHm67mhTQ3Ak8rltndpJlCDH_mUAN1Q/viewform?usp=publish-editor" target="_blank">Sign Up as a Tutor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER INFO -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>For inquiries please email: <a href="mailto:studenttostudent@gmail.com">studenttostudent@gmail.com</a></p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
