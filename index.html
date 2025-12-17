@@ -4,173 +4,208 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Student to Student Tutoring</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-  <!-- NAV -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <h1 class="logo">Student to Student Tutoring</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#tutors">Tutors</a>
-        <a href="#subjects">Subjects</a>
-        <a href="#signup" class="btn small">Sign Up</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h2>Free peer tutoring for grades 2–10</h2>
-      <p>
-        We connect students in <strong>2nd through 10th grade</strong> with knowledgeable
-        student tutors for academic help — <strong>100% free, always</strong>.
-      </p>
-      <a href="#signup" class="btn">Get Free Help</a>
-    </div>
-  </section>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">Student to Student Tutoring</div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#tutors">Tutors</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#signup">Sign Up</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container narrow">
-      <h2>Who We Are</h2>
-      <p>
-        Student to Student Tutoring is a student-run initiative dedicated to helping
-        younger students succeed academically. Our tutors are experienced,
-        approachable, and committed to giving back to the community.
-      </p>
+<main>
 
-      <div class="leaders">
-        <div class="leader-card">
-          <h3>Aadi Shelat</h3>
-          <p class="title">Founder & Executive Director</p>
-        </div>
-        <div class="leader-card">
-          <h3>Ajan Sharma</h3>
-          <p class="title">President & Lead Tutor</p>
-        </div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>Free peer tutoring for students in grades 2–10</h1>
+    <p class="lead">
+      Helping students succeed with homework, study strategies, and confidence —
+      led by experienced upperclassmen.
+    </p>
+    <a class="btn" href="#signup">Get Free Tutoring</a>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section id="about" class="section alt">
+  <div class="container">
+    <h2>Leadership</h2>
+
+    <div class="founders-grid">
+      <div class="founder-card">
+        <h3>Aadi Shelat</h3>
+        <p class="role">Founder & Executive Director</p>
+      </div>
+
+      <div class="founder-card">
+        <h3>Ajan Sharma</h3>
+        <p class="role">President & Lead Tutor</p>
       </div>
     </div>
-  </section>
 
-  <!-- TUTORS -->
-  <section id="tutors" class="section alt">
-    <div class="container">
-      <h2>Meet Our Tutors</h2>
+    <p style="margin-top: 2rem; color: var(--text-muted);">
+      Student to Student Tutoring is a student-run initiative offering completely
+      free academic support to younger students through peer-to-peer learning.
+    </p>
+  </div>
+</section>
 
-      <div class="grid tutors-grid">
+<!-- TUTORS -->
+<section id="tutors" class="section">
+  <div class="container">
+    <h2>Our Tutors</h2>
 
-        <div class="card">
-          <h3>Orson Liang</h3>
-          <p>STEM subjects and project-based help</p>
-        </div>
+    <div class="tutors-grid">
 
-        <div class="card">
-          <h3>Liam Hartmann</h3>
-          <p>Algebra, Geometry, Chemistry</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Orson Liang</h3>
+        <p class="role">STEM Specialist</p>
+        <p>Focus: STEM subjects and project-based help.</p>
+      </div>
 
-        <div class="card">
-          <h3>Paige Hammond</h3>
-          <p>Chemistry, Physics, Math</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Liam Hartmann</h3>
+        <p class="role">Math Tutor</p>
+        <p>Focus: Algebra, Geometry, and Chemistry.</p>
+      </div>
 
-        <div class="card">
-          <h3>Ethan Chen</h3>
-          <p>Math, Biology, Chemistry, Chinese</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Paige Hammond</h3>
+        <p class="role">Chemistry, Physics, & Math</p>
+        <p>Focus: Chemistry, Physics, and math support.</p>
+      </div>
 
-        <div class="card">
-          <h3>William Hunter</h3>
-          <p>English and History</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Ethan Chen</h3>
+        <p class="role">Math, Sciences, & Chinese</p>
+        <p>Focus: Math, Biology, Chemistry, and Chinese.</p>
+      </div>
 
-        <div class="card">
-          <h3>Liam Loughnane</h3>
-          <p>Advanced Math, Physics, Latin, Programming</p>
-        </div>
+      <div class="tutor-card">
+        <h3>William Hunter</h3>
+        <p class="role">English & History</p>
+        <p>Focus: Writing, literature, and history.</p>
+      </div>
 
-        <div class="card">
-          <h3>Yael Shapiro</h3>
-          <p>Geometry, Algebra 2, History</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Liam Loughnane</h3>
+        <p class="role">Advanced STEM & Programming</p>
+        <p>Focus: Advanced math, physics, Latin, and programming.</p>
+      </div>
 
-        <div class="card">
-          <h3>Dan Geva</h3>
-          <p>Geometry, Algebra 2, History</p>
-        </div>
+      <div class="tutor-card">
+        <h3>Yael Shapiro</h3>
+        <p class="role">Math & History</p>
+        <p>Focus: Geometry, Algebra II, and History.</p>
+      </div>
 
+      <div class="tutor-card">
+        <h3>Dan Geva</h3>
+        <p class="role">Math & History</p>
+        <p>Focus: Geometry, Algebra II, and History.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUBJECTS -->
+<section id="subjects" class="section alt">
+  <div class="container">
+    <h2>Subjects Offered</h2>
+
+    <div class="subjects-grid">
+      <div class="subject-card">
+        <h4>Math</h4>
+        <p>Grades 2–10, Algebra through Calculus</p>
+      </div>
+
+      <div class="subject-card">
+        <h4>Science</h4>
+        <p>Biology, Chemistry, Physics</p>
+      </div>
+
+      <div class="subject-card">
+        <h4>English</h4>
+        <p>Reading, Writing, Literature</p>
+      </div>
+
+      <div class="subject-card">
+        <h4>History</h4>
+        <p>World History & U.S. History</p>
+      </div>
+
+      <div class="subject-card">
+        <h4>Coding</h4>
+        <p>Python, Java, Programming Basics</p>
+      </div>
+
+      <div class="subject-card">
+        <h4>Languages</h4>
+        <p>Chinese, Latin</p>
+      </div>
+
+      <div class="subject-card wide">
+        <h4>Grade Coverage</h4>
+        <p>Free tutoring for students in grades 2 through 10.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SUBJECTS -->
-  <section id="subjects" class="section">
-    <div class="container">
-      <h2>Subjects Offered</h2>
+<!-- SIGNUP -->
+<section id="signup" class="section">
+  <div class="container">
+    <h2>Sign Up</h2>
 
-      <ul class="subjects-list">
-        <li>Math (Elementary Math → Calculus)</li>
-        <li>Biology, Chemistry, Physics</li>
-        <li>English & Writing</li>
-        <li>History / Social Studies</li>
-        <li>Programming (Python & Java)</li>
-        <li>Languages (Chinese, Latin)</li>
-        <li>Economics</li>
-      </ul>
-
-      <p class="note">
-        We offer tutoring for students in <strong>2nd through 10th grade</strong>.
-      </p>
-    </div>
-  </section>
-
-  <!-- SIGNUP -->
-  <section id="signup" class="section alt">
-    <div class="container signup-grid">
-
+    <div class="signup-links">
       <div class="signup-card">
-        <h3>Need a tutor?</h3>
-        <p><strong>Free one-on-one help</strong> for grades 2–10.</p>
-        <a class="btn"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfIbGK-cFpmL8tbk7_HzeT0z-sRKs0uzM3I8wgg_nxPsewC2Q/viewform">
-          Get Tutored
+        <h3>Need help? It’s 100% free.</h3>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfIbGK-cFpmL8tbk7_HzeT0z-sRKs0uzM3I8wgg_nxPsewC2Q/viewform">
+          Request a Tutor
         </a>
       </div>
 
       <div class="signup-card">
-        <h3>Want to tutor?</h3>
-        <p>Give back and earn service hours.</p>
-        <a class="btn outline"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfYc05n-NvpuJ9tSuyjHm67mhTQ3Ak8rltndpJlCDH_mUAN1Q/viewform">
+        <h3>Want to become a tutor?</h3>
+        <a class="btn outline" href="https://docs.google.com/forms/d/e/1FAIpQLSfYc05n-NvpuJ9tSuyjHm67mhTQ3Ak8rltndpJlCDH_mUAN1Q/viewform">
           Become a Tutor
         </a>
       </div>
-
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>Student to Student Tutoring</p>
-      <p>Contact: <strong>(857) 218-8394</strong></p>
-      <p class="small">Free tutoring • Student-run • Grades 2–10</p>
-    </div>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="section alt">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:studenttostudent@example.com">studenttostudent@example.com</a></p>
+    <p>Phone: (857) 218-8394</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Student to Student Tutoring · Free peer tutoring for grades 2–10</p>
+  </div>
+</footer>
 
 </body>
 </html>
-
 
  
