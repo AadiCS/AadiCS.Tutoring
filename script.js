@@ -1,26 +1,45 @@
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('#site-nav');
 
-document.addEventListener('DOMContentLoaded', function () {
-  // mobile nav toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  if(navToggle){
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('show');
-    });
+if (navToggle && nav) {
+  document.documentElement.classList.add('nav-enhanced');
+  navToggle.hidden = false;
+
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.textContent = open ? 'Close' : 'Menu';
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      const targetId = this.getAttribute('href');
-      if (targetId.length > 1) {
-        e.preventDefault();
-        const el = document.querySelector(targetId);
-        if (el) {
-          el.scrollIntoView({behavior:'smooth', block:'start'});
-          // close mobile nav
-          if(nav.classList.contains('show')) nav.classList.remove('show');
-        }
-      }
-    });
+  navToggle.addEventListener('click', () => {
+    setMenu(navToggle.getAttribute('aria-expanded') !== 'true');
   });
-});
+
+  nav.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+    if (!link) return;
+    const wasOpen = nav.classList.contains('is-open');
+    setMenu(false);
+    if (wasOpen && link.getAttribute('href').startsWith('#')) {
+      const target = document.getElementById(link.hash.slice(1));
+      if (target) {
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+      setMenu(false);
+      navToggle.focus();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.site-header')) setMenu(false);
+  });
+
+  window.matchMedia('(max-width: 800px)').addEventListener('change', () => setMenu(false));
+}
